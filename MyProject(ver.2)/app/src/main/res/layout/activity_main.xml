@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/mainRelativeLayout"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CB64ECB6"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center_horizontal"
+        android:text="원하시는 책을 선택하세요!"
+        android:textColor="#222222"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_below="@+id/Title"
+        >
+
+    <RelativeLayout
+        android:id="@+id/products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        // 1
+
+        <RelativeLayout
+            android:id="@+id/first_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/first_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/little" />
+
+
+            <TextView
+                android:id="@+id/first_name"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/first_img"
+                android:layout_gravity="center_horizontal"
+                android:text="작은 아씨들"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/first_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_name"
+                android:layout_gravity="center_horizontal"
+                android:text="12000원"
+                android:textColor="#E91E63"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+            <CheckBox
+                android:id="@+id/first_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/first_price"
+                android:layout_gravity="center_horizontal" />
+        </RelativeLayout>
+        // 1끝
+
+        //2
+
+        <RelativeLayout
+            android:id="@+id/second_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/first_product"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/second_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/animal" />
+
+            <TextView
+                android:id="@+id/second_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/second_img"
+                android:layout_gravity="center_horizontal"
+                android:text="동물 농장"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@id/second_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/second_name"
+                android:layout_gravity="center_horizontal"
+                android:text="15000원"
+                android:textColor="#E91E63"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+            <CheckBox
+                android:id="@+id/second_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second_price"
+                android:layout_gravity="center_horizontal"></CheckBox>
+        </RelativeLayout>
+        //2끝
+
+        //3
+
+        <RelativeLayout
+            android:id="@+id/third_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/second_product"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/third_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/demian" />
+
+            <TextView
+                android:id="@+id/third_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third_img"
+                android:layout_gravity="center_horizontal"
+                android:text="데미안"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/third_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third_name"
+                android:layout_gravity="center_horizontal"
+                android:text="9800원"
+                android:textColor="#E91E63"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+            <CheckBox
+                android:id="@+id/third_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third_price"
+                android:layout_gravity="center_horizontal"></CheckBox>
+        </RelativeLayout>
+        //3 끝
+
+        //4
+
+        <RelativeLayout
+            android:id="@+id/fourth_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_product"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/fourth_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/franken" />
+
+            <TextView
+                android:id="@+id/fourth_name"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fourth_img"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="프랑켄슈타인"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fourth_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fourth_name"
+                android:layout_gravity="center_horizontal"
+                android:text="13500원"
+                android:textColor="#E91E63"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+            <CheckBox
+                android:id="@+id/fourth_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fourth_price"
+                android:layout_gravity="center_horizontal"></CheckBox>
+        </RelativeLayout>
+        //4 끝
+
+        //5
+
+        <RelativeLayout
+            android:id="@+id/fifth_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_product"
+            android:layout_toRightOf="@id/fourth_product"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/fifth_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/great" />
+
+            <TextView
+                android:id="@+id/fifth_name"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fifth_img"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="위대한 개츠비"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fifth_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fifth_name"
+                android:layout_gravity="center_horizontal"
+                android:text="11000원"
+                android:textColor="#E91E63"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+            <CheckBox
+                android:id="@+id/fifth_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fifth_price"
+                android:layout_gravity="center_horizontal"></CheckBox>
+        </RelativeLayout>
+        //5 끝
+
+        //6
+
+        <RelativeLayout
+            android:id="@+id/sixth_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/third_product"
+            android:layout_toRightOf="@id/fifth_product"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/sixth_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/les" />
+
+            <TextView
+                android:id="@+id/sixth_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sixth_img"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="레 미제라블"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sixth_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sixth_name"
+                android:layout_gravity="center_horizontal"
+                android:text="14700원"
+                android:textColor="#E91E63"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+            <CheckBox
+                android:id="@+id/sixth_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sixth_price"
+                android:layout_gravity="center_horizontal"></CheckBox>
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scroll"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/main_purchasebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="구매하기" />
+
+        <Button
+            android:id="@+id/main_cartbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/main_purchasebtn"
+            android:text="장바구니" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
